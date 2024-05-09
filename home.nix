@@ -13,6 +13,8 @@
     waybar
     wofi
     gh
+    htop
+    swaylock
   ];
 
   wayland.windowManager.hyprland = {
@@ -28,8 +30,25 @@
       "$term" = "foot";
       "$launcher" = "wofi --show=drun";
 
+      general = {
+        gaps_in = 5;
+        gaps_out = 10;
+      };
+
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 4;
+      };
+
       exec-once = [
         "fcitx5"
+        "waybar"
+      ];
+
+      monitor = [
+        "eDP-1, 1920x1080, 960x1080, 1"
+        "DP-1, preferred, 0x0, 2"
+        ",preferred, auto, 1"
       ];
 
       bind = [
@@ -83,6 +102,69 @@
         "$modshift,0,movetoworkspace,10"
       ];
     };
+
+    extraConfig = ''
+      device:dell09e8:00-04f3:3146-touchpad {
+        natural_scroll = true
+      }
+    '';
+  };
+
+  programs.waybar = {
+    enable = true;
+    settings = [{
+      height = 20;
+      modules-left = [ "hyprland/workspaces" ];
+      modules-center = [ "clock" ];
+      modules-right = [ "network" "battery" ];
+      clock = {
+        format = "{:%Y-%m-%d %H:%M}";
+      };
+      network = {
+        format = "{ifname}";
+        format-wifi = "{essid} ({signalStrength}%) ";
+        format-ethernet = "{ipaddr}/{cidr} 󰊗";
+        format-disconnected = "Disconnected";
+        tooltip-format = "{ifname} via {gwaddr} 󰊗";
+        tooltip-format-wifi = "{essid} ({signalStrength}%) ";
+        tooltip-format-ethernet = "{ifname} ";
+        tooltip-format-disconnected = "Disconnected";
+        max-length = 50;
+      };
+      battery = {
+        format = "{capacity}% {icon}%";
+        format-icons = [ "" "" "" "" "" ];
+      };
+    }];
+    style = ''
+      * {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      window#waybar {
+        background: transparent;
+        border-bottom: none;
+      }
+    '';
+  };
+
+  programs.foot = {
+    enable = true;
+
+    settings = {
+      main = {
+        term = "xterm-256color";
+
+        font = "HackGen35 Console NF:size=12";
+        # dpi-aware = "yes";
+      };
+
+      mouse = {
+        hide-when-typing = "yes";
+      };
+    };
   };
 
   i18n.inputMethod = {
@@ -91,6 +173,18 @@
       fcitx5-mozc
       fcitx5-gtk
     ];
+  };
+
+  programs.vim = {
+    enable = true;
+    settings = { number = true; };
+    extraConfig = ''
+      set autoindent
+      set smartindent
+      set smartcase
+      inoremap <silent> jk <esc>
+      noremap x "_x
+    '';
   };
 
   programs.git = {
