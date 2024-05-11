@@ -12,10 +12,10 @@
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations =  {
-      my-nixos = nixpkgs.lib.nixosSystem {
+      dell = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./hosts/dell-inspiron/configuration.nix
           
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
