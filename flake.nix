@@ -21,7 +21,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.yukiy4n4g1 = import ./home.nix;
+            home-manager.users.yukiy4n4g1 = import ./home/home.nix;
           }
         ];
       };

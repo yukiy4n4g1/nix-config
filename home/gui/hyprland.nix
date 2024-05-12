@@ -1,23 +1,7 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  home.username = "yukiy4n4g1";
-  home.homeDirectory = "/home/yukiy4n4g1";
-
-  home.packages = with pkgs; [
-    neofetch
-    alacritty
-    kitty
-    xfce.thunar
-    foot
-    waybar
-    wofi
-    gh
-    htop
-    swaylock
-  ];
-
-  wayland.windowManager.hyprland = {
+    wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
     xwayland.enable = true;
@@ -109,89 +93,4 @@
       }
     '';
   };
-
-  programs.waybar = {
-    enable = true;
-    settings = [{
-      height = 20;
-      modules-left = [ "hyprland/workspaces" ];
-      modules-center = [ "clock" ];
-      modules-right = [ "network" "battery" ];
-      clock = {
-        format = "{:%Y-%m-%d %H:%M}";
-      };
-      network = {
-        format = "{ifname}";
-        format-wifi = "{essid} ({signalStrength}%) ";
-        format-ethernet = "{ipaddr}/{cidr} 󰊗";
-        format-disconnected = "Disconnected";
-        tooltip-format = "{ifname} via {gwaddr} 󰊗";
-        tooltip-format-wifi = "{essid} ({signalStrength}%) ";
-        tooltip-format-ethernet = "{ifname} ";
-        tooltip-format-disconnected = "Disconnected";
-        max-length = 50;
-      };
-      battery = {
-        format = "{capacity}% {icon}%";
-        format-icons = [ "" "" "" "" "" ];
-      };
-    }];
-    style = ''
-      * {
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: bold;
-      }
-
-      window#waybar {
-        background: transparent;
-        border-bottom: none;
-      }
-    '';
-  };
-
-  programs.foot = {
-    enable = true;
-
-    settings = {
-      main = {
-        term = "xterm-256color";
-
-        font = "HackGen35 Console NF:size=12";
-        # dpi-aware = "yes";
-      };
-
-      mouse = {
-        hide-when-typing = "yes";
-      };
-    };
-  };
-
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-      fcitx5-gtk
-    ];
-  };
-
-  programs.vim = {
-    enable = true;
-    settings = { number = true; };
-    extraConfig = ''
-      set autoindent
-      set smartindent
-      set smartcase
-      inoremap <silent> jk <esc>
-      noremap x "_x
-    '';
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "yukiy4n4g1";
-    userEmail = "40228235+yukiy4n4g1@users.noreply.github.com";
-  };
-  home.stateVersion = "23.11";
-  programs.home-manager.enable = true;
 }
