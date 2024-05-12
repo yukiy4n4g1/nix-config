@@ -40,10 +40,14 @@
         "$mod,Space,exec,$launcher"
         "$mod,Delete,exec,hyprctl dispatch exit"
         "CTRLALT,Delete,exec,hyprctl dispatch exit"
+        "$mod,Escape,exec,swaylock -f -c 000000"
 
         "$mod,Q,killactive"
         "$mod,F,fullscreen"
         "$modshift,F,togglefloating"
+
+        ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
+        ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
 
         "$mod,left,movefocus,l"
         "$mod,right,movefocus,r"

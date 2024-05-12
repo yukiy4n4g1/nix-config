@@ -12,6 +12,7 @@
     waybar
     wofi
     swaylock
+    brightnessctl
   ];
 
   programs.foot = {
