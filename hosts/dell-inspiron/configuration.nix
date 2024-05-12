@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -134,9 +134,6 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  virtualisation.virtualbox.guest.enable = true;
-  virtualisation.virtualbox.guest.x11 = true;
-
   fonts = {
     packages = with pkgs; [
       noto-fonts
@@ -146,6 +143,11 @@
       hackgen-nf-font
     ];
   };
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "vscode"
+    ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

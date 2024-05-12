@@ -38,5 +38,9 @@
       fcitx5-gtk
     ];
   };
+
+  programs.vscode = {
+    enable = true;
+  };
 }
 
