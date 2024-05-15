@@ -51,13 +51,6 @@
   # services.xserver.displayManager.gdm.wayland = true;
   # services.xserver.desktopManager.xfce.enable = true;
 
-  services.xserver.libinput = {
-    enable = true;
-    touchpad = {
-      naturalScrolling = true;
-    };
-  };
-
   security.polkit.enable = true;
   security.pam.services.swaylock = {};
 
