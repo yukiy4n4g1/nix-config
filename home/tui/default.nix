@@ -10,6 +10,9 @@
     neofetch
     gh
     htop
+    fzf
+    fd
+    ripgrep
   ];
 
   programs.vim = {
@@ -37,6 +40,11 @@
   };
 
   programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
+  programs.yazi = {
     enable = true;
     enableBashIntegration = true;
   };
