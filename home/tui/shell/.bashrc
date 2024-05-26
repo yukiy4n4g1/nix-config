@@ -12,7 +12,6 @@ stty stop undef
 
 set bell-style none
 
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -24,6 +23,8 @@ alias gpp='g++'
 alias sl='ls'
 alias chmod='chmod --preserve-root'
 alias chown='chown --preserve-root'
+alias yz='yazi'
+
 if type eza &> /dev/null; then
   alias ls='eza --group-directories-first'
   alias la='eza --group-directories-first -a'
@@ -32,6 +33,11 @@ else
   alias ls='ls --color=auto'
   alias ll='ls -alF'
   alias la='ls -A' 
+fi
+
+if command -v fzf-share >/dev/null; then
+  source "$(fzf-share)/key-bindings.bash"
+  source "$(fzf-share)/completion.bash"
 fi
 
 emoji=("🐧" "👽" "🎃" "💤" "🌋" "🔚" "🤔")
