@@ -35,5 +35,10 @@
     git = true;
     icons = true;
   };
+
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+  };
 }
 
