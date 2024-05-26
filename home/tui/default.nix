@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./shell/default.nix
+  ];
+
   home.packages = with pkgs; [
     bat
     neofetch
