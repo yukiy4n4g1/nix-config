@@ -93,7 +93,8 @@
     };
 
     extraConfig = ''
-      device:dell09e8:00-04f3:3146-touchpad {
+      device {
+        name = dell09e8:00-04f3:3146-touchpad
         natural_scroll = true
       }
     '';
