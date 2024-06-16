@@ -9,8 +9,8 @@
     # systemd.enable = true;
 
     settings = {
-      "$mod" = "ALT";
-      "$modshift" = "ALTSHIFT";
+      "$mod" = "SUPER";
+      "$modshift" = "SUPERSHIFT";
       "$term" = "foot";
       "$launcher" = "wofi --show=drun";
 
