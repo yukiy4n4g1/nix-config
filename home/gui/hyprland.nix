@@ -27,6 +27,7 @@
       exec-once = [
         "fcitx5"
         "waybar"
+        "fusuma"
       ];
 
       monitor = [

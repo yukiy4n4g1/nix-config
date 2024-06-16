@@ -92,7 +92,7 @@
   users.users.yukiy4n4g1 = {
     isNormalUser = true;
     description = "yukiy4n4g1";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "ydotool" ];
     packages = with pkgs; [
       firefox
     #  thunderbird
@@ -108,6 +108,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     curl
+    fusuma
   ];
 
   # Set the default editor to vim
@@ -120,6 +121,8 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  programs.ydotool.enable = true;
 
   # List services that you want to enable:
 
