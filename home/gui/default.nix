@@ -4,6 +4,7 @@
   imports = [
     ./hyprland.nix
     ./waybar.nix
+    ./base.nix
   ];
 
   home.packages = with pkgs; [
