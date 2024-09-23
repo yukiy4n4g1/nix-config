@@ -21,5 +21,5 @@ nix-shell '<home-manager>' -A install
 home-manager switch -b bck --flake .#pop
 
 # update
-nix-channnel --update && home-manager switch --flake .#pop
+nix flake update && home-manager switch --flake .#pop
 ```
