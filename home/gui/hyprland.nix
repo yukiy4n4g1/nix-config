@@ -37,6 +37,10 @@
         ",preferred, auto, 1"
       ];
 
+      layerrule = [
+        "blur, waybar"
+      ];
+
       bind = [
         "$mod,Return,exec,$term"
         "$mod,Space,exec,$launcher"
