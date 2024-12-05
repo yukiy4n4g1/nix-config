@@ -23,7 +23,7 @@
       main = {
         term = "xterm-256color";
 
-        font = "HackGen35 Console NF:size=12";
+        font = "PlemolJP35 Console NF:size=12";
         # dpi-aware = "yes";
       };
 
@@ -32,7 +32,7 @@
       };
 
       cursor = {
-        color = "c0caf5 283457";
+        color = "283457 c0caf5";
       };
 
       colors = {
@@ -76,6 +76,11 @@
 
   programs.vscode = {
     enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      enkia.tokyo-night
+      vscodevim.vim
+      jnoortheen.nix-ide
+    ];
   };
 
   services.fusuma = {
