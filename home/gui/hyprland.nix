@@ -16,7 +16,7 @@
 
       general = {
         gaps_in = 5;
-        gaps_out = 10;
+        gaps_out = "10,10,10,10";
       };
 
       gestures = {
@@ -28,6 +28,10 @@
         "fcitx5"
         "waybar"
         "fusuma"
+      ];
+
+      animation = [
+        "workspaces, 1, 8, default, fade"
       ];
 
       monitor = [
@@ -102,9 +106,25 @@
         "$modshift,9,movetoworkspace,9"
         "$modshift,0,movetoworkspace,10"
       ];
+
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod, Control_L, movewindow"
+        "$mod, mouse:273, resizewindow"
+        "$mod, ALT_L, resizewindow"
+      ];
     };
 
     extraConfig = ''
+      bind = $mod, R, submap, resize
+      submap = resize
+      binde = , right, resizeactive, 10 0
+      binde = , left, resizeactive, -10 0
+      binde = , up, resizeactive, 0 -10
+      binde = , down, resizeactive, 0 10
+      bind = , escape, submap, reset 
+      submap = reset
+
       device {
         name = dell09e8:00-04f3:3146-touchpad
         natural_scroll = true
