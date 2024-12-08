@@ -26,7 +26,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.yukiy4n4g1 = (import ./home/default.nix inputs);
+            home-manager.users.yukiy4n4g1 = (import ./home/sets/linux-wayland.nix inputs);
           }
         ];
       };

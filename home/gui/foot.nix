@@ -1,21 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./hyprland.nix
-    ./waybar.nix
-    ./base.nix
-  ];
-
-  home.packages = with pkgs; [
-    xfce.thunar
-    foot
-    waybar
-    wofi
-    swaylock
-    brightnessctl
-  ];
-
   programs.foot = {
     enable = true;
 
@@ -65,45 +50,4 @@
       };
     };
   };
-
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-mozc
-      fcitx5-gtk
-    ];
-  };
-
-  programs.vscode = {
-    enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      enkia.tokyo-night
-      vscodevim.vim
-      jnoortheen.nix-ide
-    ];
-  };
-
-  services.fusuma = {
-    enable = true;
-    extraPackages = with pkgs; [ ydotool ];
-    settings = {
-      threshold = {
-        swipe = 0.1;
-      };
-      interval = {
-        swipe = 0.7;
-      };
-      swipe = {
-        "3" = {
-          left = {
-            command = "ydotool click 0xC3";
-          };
-          right = {
-            command = "ydotool click 0xC4";
-          };
-        };
-      };
-    };
-  };
 }
-

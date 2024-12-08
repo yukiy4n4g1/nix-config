@@ -7,8 +7,18 @@ in {
   programs.vscode.package = pkgs-unstable.vscode.fhs;
 
   imports = [
-    ./home.nix
-    ./tui/default.nix
-    ./gui/default.nix
+    ../home.nix
+
+    ../gui/packages.nix
+    ../gui/fcitx.nix
+    ../gui/fonts.nix
+    ../gui/foot.nix
+    ../gui/fusuma.nix
+    ../gui/hyprland.nix
+    ../gui/vscode.nix
+    ../gui/waybar.nix
+
+    ../tui/packages.nix
+    ../tui/bash/default.nix
   ];
 }
