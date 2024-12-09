@@ -55,6 +55,7 @@
       * {
         color: #ffffff;
         font-size: 16px;
+        font-family: 'JetBrainsMonoNL Nerd Font';
       }
 
       window#waybar {
