@@ -14,6 +14,7 @@ in {
     ../gui/fonts.nix
     ../gui/foot.nix
     ../gui/fusuma.nix
+    ../gui/gtk.nix
     ../gui/hyprland.nix
     ../gui/vscode.nix
     ../gui/waybar.nix

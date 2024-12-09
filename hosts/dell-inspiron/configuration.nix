@@ -142,6 +142,7 @@
   security.pam.services.swaylock = {};
 
   programs.ydotool.enable = true;
+  programs.dconf.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
