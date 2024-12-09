@@ -109,7 +109,6 @@
 
       bindm = [
         "$mod, mouse:272, movewindow"
-        "$mod, Control_L, movewindow"
         "$mod, mouse:273, resizewindow"
         "$mod, ALT_L, resizewindow"
       ];
