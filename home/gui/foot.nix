@@ -8,7 +8,7 @@
       main = {
         term = "xterm-256color";
 
-        font = "PlemolJP35 Console NF:size=12";
+        font = "HackGen35ConsoleNF:size=13";
         # dpi-aware = "yes";
       };
 
