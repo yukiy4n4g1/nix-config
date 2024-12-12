@@ -1,0 +1,255 @@
+set $mod Mod4
+set $alt Mod1
+
+##################
+## Move Keybind ##
+##################
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+set $ws13 "13"
+set $ws14 "14"
+set $ws15 "15"
+set $ws16 "16"
+set $ws17 "17"
+set $ws18 "18"
+set $ws19 "19"
+set $ws20 "20"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+bindsym $mod+shift+1 move container to workspace number $ws1
+bindsym $mod+shift+2 move container to workspace number $ws2
+bindsym $mod+shift+3 move container to workspace number $ws3
+bindsym $mod+shift+4 move container to workspace number $ws4
+bindsym $mod+shift+5 move container to workspace number $ws5
+bindsym $mod+shift+6 move container to workspace number $ws6
+bindsym $mod+shift+7 move container to workspace number $ws7
+bindsym $mod+shift+8 move container to workspace number $ws8
+bindsym $mod+shift+9 move container to workspace number $ws9
+bindsym $mod+shift+0 move container to workspace number $ws10
+bindsym $mod+shift+ctrl+1 move container to workspace number $ws11
+bindsym $mod+shift+ctrl+2 move container to workspace number $ws12
+bindsym $mod+shift+ctrl+3 move container to workspace number $ws13
+bindsym $mod+shift+ctrl+4 move container to workspace number $ws14
+bindsym $mod+shift+ctrl+5 move container to workspace number $ws15
+bindsym $mod+shift+ctrl+6 move container to workspace number $ws16
+bindsym $mod+shift+ctrl+7 move container to workspace number $ws17
+bindsym $mod+shift+ctrl+8 move container to workspace number $ws18
+bindsym $mod+shift+ctrl+9 move container to workspace number $ws19
+
+bindsym $mod+$alt+1 move container to workspace number $ws1; workspace number $ws1  
+bindsym $mod+$alt+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+$alt+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+$alt+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+$alt+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+$alt+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+$alt+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+$alt+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+$alt+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+$alt+0 move container to workspace number $ws10; workspace number $ws10
+bindsym $mod+$alt+ctrl+1 move container to workspace number $ws11; workspace number $ws11
+bindsym $mod+$alt+ctrl+2 move container to workspace number $ws12; workspace number $ws12
+bindsym $mod+$alt+ctrl+3 move container to workspace number $ws13; workspace number $ws13
+bindsym $mod+$alt+ctrl+4 move container to workspace number $ws14; workspace number $ws14
+bindsym $mod+$alt+ctrl+5 move container to workspace number $ws15; workspace number $ws15
+bindsym $mod+$alt+ctrl+6 move container to workspace number $ws16; workspace number $ws16
+bindsym $mod+$alt+ctrl+7 move container to workspace number $ws17; workspace number $ws17
+bindsym $mod+$alt+ctrl+8 move container to workspace number $ws18; workspace number $ws18
+bindsym $mod+$alt+ctrl+9 move container to workspace number $ws19; workspace number $ws19
+
+bindsym $mod+Left   focus left
+bindsym $mod+Down   focus down
+bindsym $mod+Up     focus up
+bindsym $mod+Right  focus right
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Tab        workspace next_on_output
+bindsym $mod+$alt+Right workspace next_on_output
+bindsym $mod+Next       workspace next_on_output
+bindsym $mod+n          workspace next_on_output
+
+bindsym $mod+Shift+Tab  workspace prev_on_output
+bindsym $mod+$alt+Left  workspace prev_on_output
+bindsym $mod+Prior      workspace prev_on_output
+bindsym $mod+p          workspace prev_on_output
+
+bindsym $mod+Shift+Left     move left
+bindsym $mod+Shift+Down     move down
+bindsym $mod+Shift+Up       move up
+bindsym $mod+Shift+Right    move right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Ctrl+Shift+Left    move workspace to output left
+bindsym $mod+Ctrl+Shift+Down    move workspace to output down
+bindsym $mod+Ctrl+Shift+Up      move workspace to output up
+bindsym $mod+Ctrl+Shift+Right   move workspace to output right
+
+bindsym $mod+Ctrl+m move to scratchpad
+bindsym $mod+Ctrl+a scratchpad show
+
+######################
+### Basic Settings ###
+######################
+
+floating_modifier $mod
+
+focus_follows_mouse no
+
+hide_edge_borders smart
+
+default_border pixel 3
+default_floating_border pixel 3
+
+smart_gaps on
+smart_borders on
+
+popup_during_fullscreen smart
+
+########################
+### Standard Keybind ###
+########################
+set $term     foot
+set $browser  firefox
+set $launcher "wofi --show=drun"
+
+bindsym $mod+t         layout     toggle tabbed splith splitv
+bindsym $mod+BackSpace split      toggle
+bindsym $mod+f         fullscreen toggle
+bindsym $mod+Shift+f   floating   toggle
+bindsym $mod+Shift+t   focus mode_toggle
+bindsym $mod+i         bar mode   toggle
+
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+Shift+q    kill
+bindsym $mod+Control+q  kill
+
+####################
+### Exec Keybind ###
+####################
+
+bindsym $mod+Return       exec --no-startup-id $term
+bindsym $mod+Shift+Return exec $browser
+bindsym $mod+space        exec --no-startup-id $launcher
+
+#bindsym Print exec --no-startup-id xfce4-screenshooter
+
+bindsym $mod+Escape exec --no-startup-id swaylock -f -c 000000
+
+bindsym XF86AudioMute        exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id "wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "wpctl set-mute @DEFAULT_AUDIO_SINK@ 0; wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+#bindsym XF86AudioMicMute    exec --no-startup-id pactl set-source-mute 1 toggle
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
+############################
+### Startup Applications ###
+############################
+
+exec fcitx5
+exec waybar
+exec fusuma
+
+#####################
+### Mode Settings ###
+#####################
+
+#set $i3-wm.program.display      arandr 
+#set $i3-wm.program.wifi         nm-connection-editor
+#set $i3-wm.program.bluetooth    blueman
+# set $i3-wm.program.sound
+
+mode "Exec Config" {
+    #bindsym d exec $i3-wm.program.display; mode default
+    #bindsym w exec $i3-wm.program.wifi; mode default
+    #bindsym b exec $i3-wm.program.bluetooth; mode default
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+s mode "default"
+}
+bindsym $mod+s mode "Exec Config"
+
+mode "Resize Mode" {
+        bindsym Left  resize shrink width  2 px or 2 ppt
+        bindsym Down  resize grow   height 2 px or 2 ppt
+        bindsym Up    resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow   width  2 px or 2 ppt
+
+        bindsym Shift+Left  resize shrink width  4 px or 4 ppt
+        bindsym Shift+Down  resize grow   height 4 px or 4 ppt
+        bindsym Shift+Up    resize shrink height 4 px or 4 ppt
+        bindsym Shift+Right resize grow   width  4 px or 4 ppt
+
+        bindsym h resize shrink width  2 px or 2 ppt
+        bindsym k resize grow   height 2 px or 2 ppt
+        bindsym j resize shrink height 2 px or 2 ppt
+        bindsym l resize grow   width  2 px or 2 ppt
+
+        bindsym Shift+h resize shrink width  4 px or 4 ppt
+        bindsym Shift+k resize grow   height 4 px or 4 ppt
+        bindsym Shift+j resize shrink height 4 px or 4 ppt
+        bindsym Shift+l resize grow   width  4 px or 4 ppt
+
+        bindsym minus       gaps inner current minus 2
+        bindsym plus        gaps inner current plus  2
+        bindsym Shift+minus gaps inner current minus 4
+        bindsym Shift+plus  gaps inner current plus  4
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "Resize Mode"
+
+mode "POWER" {
+        bindsym s exec --no-startup-id "systemctl poweroff"
+        bindsym p exec --no-startup-id "systemctl poweroff"
+        bindsym r exec --no-startup-id "systemctl reboot"
+
+        bindsym Return          mode "default"
+        bindsym Escape          mode "default"
+        bindsym $mod+Shift+p    mode "default"
+}
+bindsym $mod+Shift+p mode "POWER"
+
+######################
+### Input Settings ###
+######################
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+}

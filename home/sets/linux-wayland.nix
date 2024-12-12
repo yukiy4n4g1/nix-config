@@ -16,6 +16,7 @@ in {
     ../gui/fusuma.nix
     ../gui/gtk.nix
     ../gui/hyprland.nix
+    ../gui/sway/default.nix
     ../gui/vscode.nix
     ../gui/waybar.nix
 

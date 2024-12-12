@@ -6,5 +6,6 @@
     wofi
     swaylock
     brightnessctl
+    nwg-displays
   ];
 }
