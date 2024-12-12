@@ -6,6 +6,7 @@
     noto-fonts-cjk-serif
     noto-fonts-color-emoji
     plemoljp-nf
+    hackgen-nf-font
   ];
 
   fonts.fontconfig = {

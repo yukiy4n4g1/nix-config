@@ -8,7 +8,12 @@
 
     theme = {
       package = pkgs.tokyonight-gtk-theme;
-      name = "Tokyonight";
+      name = "Tokyonight-Dark-BL";
+    };
+
+    iconTheme = {
+      package = pkgs.tokyonight-gtk-theme;
+      name = "Tokyonight-Dark";
     };
 
     gtk3.extraConfig = {
