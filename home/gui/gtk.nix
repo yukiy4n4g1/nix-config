@@ -8,7 +8,7 @@
 
     theme = {
       package = pkgs.tokyonight-gtk-theme;
-      name = "Tokyonight-Dark-BL";
+      name = "Tokyonight-Dark";
     };
 
     iconTheme = {
