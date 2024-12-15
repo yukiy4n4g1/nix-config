@@ -16,6 +16,7 @@ in {
     ../gui/fusuma.nix
     ../gui/gtk.nix
     ../gui/hyprland.nix
+    ../gui/kanshi.nix
     ../gui/sway/default.nix
     ../gui/swaylock.nix
     ../gui/vscode.nix
