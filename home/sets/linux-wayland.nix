@@ -17,6 +17,7 @@ in {
     ../gui/gtk.nix
     ../gui/hyprland.nix
     ../gui/sway/default.nix
+    ../gui/swaylock.nix
     ../gui/vscode.nix
     ../gui/waybar.nix
 
