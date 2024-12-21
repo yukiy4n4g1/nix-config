@@ -6,5 +6,7 @@
     wofi
     brightnessctl
     nwg-displays
+    vlc
+    qimgv # image viewer
   ];
 }
