@@ -14,11 +14,11 @@
       network = {
         format = "{ifname}";
         format-wifi = "  {signalStrength}%";
-        format-ethernet = "󰊗 {ipaddr}/{cidr}";
+        format-ethernet = "󰈀 Connected";
         format-disconnected = "󰤮 ";
         tooltip-format = "󰊗 {ifname} via {gwaddr}";
         tooltip-format-wifi = "{essid}";
-        tooltip-format-ethernet = " {ifname}";
+        tooltip-format-ethernet = " {ipaddr}/{cidr} {ifname}";
         tooltip-format-disconnected = "Disconnected";
         max-length = 50;
       };
