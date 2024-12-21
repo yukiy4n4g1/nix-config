@@ -133,6 +133,12 @@ smart_borders on
 
 popup_during_fullscreen smart
 
+bar {
+    swaybar_command waybar
+
+    mode invisible
+}
+
 ########################
 ### Standard Keybind ###
 ########################
@@ -179,8 +185,11 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 ############################
 
 exec fcitx5
-exec waybar
 exec fusuma
+exec swayidle -w \
+	timeout 600 'swaylock -f' \
+	timeout 630 'swaymsg "output * power off"' \
+	resume 'swaymsg "output * power on"'
 
 #####################
 ### Mode Settings ###
