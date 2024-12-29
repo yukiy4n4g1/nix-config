@@ -22,6 +22,7 @@ in {
     ../gui/vscode.nix
     ../gui/waybar.nix
 
+    ../tui/git.nix
     ../tui/packages.nix
     ../tui/bash/default.nix
   ];
