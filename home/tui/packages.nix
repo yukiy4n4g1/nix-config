@@ -29,11 +29,6 @@
     icons = "auto";
   };
 
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
