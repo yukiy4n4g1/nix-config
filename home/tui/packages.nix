@@ -11,12 +11,6 @@
     ripgrep
   ];
 
-  programs.eza = {
-    enable = true;
-    git = true;
-    icons = "auto";
-  };
-
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
