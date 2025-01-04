@@ -11,6 +11,7 @@
     ../tui/neovim/default.nix
     ../tui/packages.nix
     ../tui/starship.nix
+    ../tui/vim/default.nix
     ../tui/wslu.nix
   ];
 }
