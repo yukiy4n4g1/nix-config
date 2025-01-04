@@ -25,15 +25,9 @@ alias chmod='chmod --preserve-root'
 alias chown='chown --preserve-root'
 alias yz='yazi'
 
-if type eza &> /dev/null; then
-  alias ls='eza --group-directories-first'
-  alias la='eza --group-directories-first -a'
-  alias ll='eza -hal --git --time-style=long-iso --group-directories-first'
-else
-  alias ls='ls --color=auto'
-  alias ll='ls -alF'
-  alias la='ls -A' 
-fi
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
 
 if command -v fzf-share >/dev/null; then
   source "$(fzf-share)/key-bindings.bash"
