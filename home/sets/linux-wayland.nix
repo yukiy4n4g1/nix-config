@@ -22,8 +22,13 @@ in {
     ../gui/vscode.nix
     ../gui/waybar.nix
 
-    ../tui/git.nix
-    ../tui/packages.nix
     ../tui/bash/default.nix
+    ../tui/neovim/default.nix
+    ../tui/vim/default.nix
+    ../tui/eza.nix
+    ../tui/git.nix
+    ../tui/lazygit.nix
+    ../tui/packages.nix
+    ../tui/starship.nix
   ];
 }
