@@ -8,6 +8,7 @@
     ../tui/bash/default.nix
     ../tui/eza.nix
     ../tui/git.nix
+    ../tui/helix.nix
     ../tui/lazygit.nix
     ../tui/neovim/default.nix
     ../tui/packages.nix
