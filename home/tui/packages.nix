@@ -6,10 +6,11 @@
     neofetch
     gh
     htop
-    fzf
     fd
     ripgrep
   ];
+
+  programs.fzf.enable = true;
 
   programs.yazi = {
     enable = true;
