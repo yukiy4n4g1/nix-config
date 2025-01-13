@@ -213,7 +213,6 @@ require("lazy").setup({
       config = function()
         require("toggleterm").setup({
           direction = 'float',
-          --open_mapping =  { [[<C-t>]], [[<c-\>]], [[<c-¥>]] },
           start_in_insert = true,
           insert_mappings = true,
           terminal_mappings = true,
@@ -237,7 +236,20 @@ require("lazy").setup({
           mode = "t",
           desc = "ToggleTerm",
         },
+        {
+          "<leader>g",
+          function()
+            local Terminal = require("toggleterm.terminal").Terminal
+            local lazygit = Terminal:new({
+              cmd = "lazygit",
+              direction = "float",
+              hidden = true
+            })
+            lazygit:toggle()
+          end,
+          desc = "lazygit",
+        }
       },
     },
   },
-})
+)
