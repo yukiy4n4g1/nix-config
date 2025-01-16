@@ -6,11 +6,13 @@
 
     settings = {
       theme = "tokyonight";
+
       keys.insert = {
         j = {
           k = "normal_mode";
         };
       };
+
       editor = {
         bufferline = "multiple";
         color-modes = true;
@@ -21,6 +23,10 @@
           insert = "bar";
           normal = "block";
           select = "underline";
+        };
+
+        file-picker = {
+          hidden = false;
         };
 
         statusline = {
@@ -46,5 +52,9 @@
         };
       };
     };
+
+    ignores = [
+      ".env"
+    ];
   };
 }
