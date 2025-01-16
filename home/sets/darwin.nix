@@ -12,6 +12,7 @@
     ../tui/eza.nix
     ../tui/helix.nix
     ../tui/lazygit.nix
+    ../tui/mise.nix
     ../tui/packages.nix
     ../tui/starship.nix
   ];
