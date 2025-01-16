@@ -62,6 +62,13 @@
           ./home/gui/base.nix
         ];
       };
+
+      darwin = home-manager-unstable.lib.homeManagerConfiguration {
+        pkgs = nixpkgs-unstable.legacyPackages.aarch64-darwin;
+        modules = [
+          ./home/sets/darwin.nix
+        ];
+      };
     };
   };
 }
