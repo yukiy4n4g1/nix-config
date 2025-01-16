@@ -44,8 +44,18 @@ nix-shell '<home-manager>' -A install
 
 # nix-configの適用
 # 既存の設定ファイルは .bck 拡張子でバックアップされる
+# 環境変数を読み込むので--impureが必要
 home-manager switch -b bck --flake .#darwin --impure
 
 # update
 nix flake update && home-manager switch --flake .#darwin --impure
+```
+
+### SSL証明書の設定
+
+```shell
+# オプション:SSL証明書の設定
+# ~/.config/nix/nix.confでもいい？
+# 再起動が必要
+sudo echo "ssl-cert-file = /path/to/my-certificate-bundle.crt" >> /etc/nix/nix.conf
 ```
