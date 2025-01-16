@@ -7,7 +7,12 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ../tui/vim/default.nix
     ../tui/zsh/default.nix
+    ../tui/eza.nix
     ../tui/helix.nix
+    ../tui/lazygit.nix
+    ../tui/packages.nix
+    ../tui/starship.nix
   ];
 }
