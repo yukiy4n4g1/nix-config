@@ -7,7 +7,7 @@
       format = "$os$shell$all";
 
       shell = {
-        disabled = false;
+        disabled = true;
       };
 
       os = {
