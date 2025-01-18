@@ -13,6 +13,9 @@
     checkConfig = false;
 
     config = {
+      keybindings = {};
+      bars = [];
+
       output = {
         "*" = {
           bg = "${config.xdg.stateHome}/home-manager/gcroots/current-home/home-path/share/backgrounds/cosmic/webb-inspired-wallpaper-system76.jpg fill";
