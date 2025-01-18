@@ -34,6 +34,8 @@ if command -v fzf-share >/dev/null; then
   source "$(fzf-share)/completion.bash"
 fi
 
+HISTCONTROL=ignoreboth
+
 emoji=("🐧" "👽" "🎃" "💤" "🌋" "🔚" "🤔")
 e_num=$(($RANDOM % ${#emoji[*]}))
 
