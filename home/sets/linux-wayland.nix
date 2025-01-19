@@ -10,6 +10,7 @@ in {
     ../home.nix
 
     ../gui/packages.nix
+    ../gui/brave.nix
     ../gui/fcitx.nix
     ../gui/fonts.nix
     ../gui/foot.nix
