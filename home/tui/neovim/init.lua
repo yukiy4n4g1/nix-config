@@ -179,7 +179,7 @@ require("lazy").setup({
         {
           "<leader>ff",
           function()
-            require("telescope.builtin").find_files()
+            require("telescope.builtin").git_files()
           end,
           desc = "Find Files",
         },
@@ -248,8 +248,20 @@ require("lazy").setup({
             lazygit:toggle()
           end,
           desc = "lazygit",
-        }
+        },
       },
+    },
+    {
+      name = "indent-blankline.nvim",
+      dir = "@indent_blankline_nvim@",
+      config = function()
+        require("ibl").setup({
+        indent = {
+          char = "▏",
+        },
+      })
+      end,
+      event = "VeryLazy",
     },
   },
 })

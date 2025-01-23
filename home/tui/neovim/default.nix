@@ -21,6 +21,7 @@
       nvim_autopairs = pkgs.vimPlugins.nvim-autopairs;
       telescope_nvim = pkgs.vimPlugins.telescope-nvim;
       toggleterm_nvim = pkgs.vimPlugins.toggleterm-nvim;
+      indent_blankline_nvim = pkgs.vimPlugins.indent-blankline-nvim;
     };
   };
 }
