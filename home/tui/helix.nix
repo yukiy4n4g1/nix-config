@@ -49,12 +49,13 @@
 
         indent-guides = {
           render = true;
+          character = "▏";
         };
       };
     };
 
     ignores = [
-      ".env"
+      "!.env"
     ];
   };
 }
