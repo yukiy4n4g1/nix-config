@@ -4,6 +4,10 @@
   programs.helix = {
     enable = true;
 
+    extraPackages = with pkgs; [
+      nixd
+    ];
+
     settings = {
       theme = "tokyonight";
 
@@ -57,5 +61,24 @@
     ignores = [
       "!.env"
     ];
+
+    languages = {
+      language = [
+        {
+          name = "rust";
+          auto-format = false;
+        }
+        {
+          name = "nix";
+          language-servers = [ "nixd" "nil" ];
+        }
+      ];
+
+      language-server = {
+        nixd = {
+          command = "nixd";
+        };
+      };
+    };
   };
 }
