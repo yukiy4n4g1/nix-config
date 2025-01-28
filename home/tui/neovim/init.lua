@@ -263,5 +263,15 @@ require("lazy").setup({
       end,
       event = "VeryLazy",
     },
+    {
+      name = "nvim-treesitter",
+      dir = "@nvim_treesitter@",
+      config = function()
+        require("nvim-treesitter.configs").setup({
+          parser_install_dir = "@ts_parser_dir@",
+        })
+      end,
+      event = "BufRead",
+    },
   },
 })

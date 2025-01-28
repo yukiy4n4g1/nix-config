@@ -1,5 +1,18 @@
 { pkgs, ... }:
-
+let
+  parsers = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+    yaml
+    json
+    html
+    javascript
+    typescript
+    rust
+    go
+    nix
+    lua
+    python
+  ];
+in
 {
   programs.neovim = {
     enable = true;
@@ -22,6 +35,8 @@
       telescope_nvim = pkgs.vimPlugins.telescope-nvim;
       toggleterm_nvim = pkgs.vimPlugins.toggleterm-nvim;
       indent_blankline_nvim = pkgs.vimPlugins.indent-blankline-nvim;
+      nvim_treesitter = pkgs.vimPlugins.nvim-treesitter;
+      ts_parser_dir = pkgs.symlinkJoin { name = "nvim-ts-parser"; paths = parsers; };
     };
   };
 }
