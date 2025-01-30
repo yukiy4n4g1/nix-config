@@ -23,6 +23,7 @@
         color-modes = true;
         cursorline = true;
         true-color = true;
+        end-of-line-diagnostics = "hint";
 
         cursor-shape = {
           insert = "bar";
@@ -55,6 +56,10 @@
         indent-guides = {
           render = true;
           # character = "▏"; # insertのbar表示と見分けがつかないのでデフォルト表示にする
+        };
+
+        inline-diagnostics = {
+          cursor-line = "warning";
         };
       };
     };
