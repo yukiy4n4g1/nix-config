@@ -5,6 +5,7 @@ let
   pkgs-unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
 in {
   programs.vscode.package = pkgs-unstable.vscode.fhs;
+  programs.helix.package = pkgs-unstable.helix;
 
   imports = [
     ../home.nix
