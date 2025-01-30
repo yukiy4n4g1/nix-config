@@ -53,7 +53,7 @@
 
         indent-guides = {
           render = true;
-          character = "▏";
+          # character = "▏"; # insertのbar表示と見分けがつかないのでデフォルト表示にする
         };
       };
     };
