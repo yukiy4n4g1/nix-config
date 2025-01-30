@@ -1,12 +1,12 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-    programs.zsh = {
-        enable = true;
-        enableCompletion = true;
-        initExtra = builtins.readFile ./.zshrc;
-        shellAliases = {
-            lg = "lazygit";
-        };
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    initExtra = builtins.readFile ./.zshrc;
+    shellAliases = {
+      lg = "lazygit";
     };
+  };
 }
