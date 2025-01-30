@@ -6,6 +6,7 @@
 
     extraPackages = with pkgs; [
       nixd
+      typescript-language-server
     ];
 
     settings = {
