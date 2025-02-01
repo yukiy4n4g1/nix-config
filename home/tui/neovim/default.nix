@@ -16,6 +16,10 @@ in
 {
   programs.neovim = {
     enable = true;
+    extraPackages = with pkgs; [
+      nixd
+      lua-language-server
+    ];
   };
   xdg.configFile = {
     "nvim/init.lua".source = pkgs.substituteAll {
@@ -37,6 +41,13 @@ in
       indent_blankline_nvim = pkgs.vimPlugins.indent-blankline-nvim;
       nvim_treesitter = pkgs.vimPlugins.nvim-treesitter;
       ts_parser_dir = pkgs.symlinkJoin { name = "nvim-ts-parser"; paths = parsers; };
+      nvim_lspconfig = pkgs.vimPlugins.nvim-lspconfig;
+      nvim_cmp = pkgs.vimPlugins.nvim-cmp;
+      cmp_nvim_lsp = pkgs.vimPlugins.cmp-nvim-lsp;
+      cmp_buffer = pkgs.vimPlugins.cmp-buffer;
+      luasnip = pkgs.vimPlugins.luasnip;
+      cmp_path = pkgs.vimPlugins.cmp-path;
+      cmp_cmdline = pkgs.vimPlugins.cmp-cmdline;
     };
   };
 }

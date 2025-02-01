@@ -256,5 +256,76 @@ require("lazy").setup({
       end,
       event = "BufRead",
     },
+    {
+      name = "nvim-lspconfig",
+      dir = "@nvim_lspconfig@",
+      event = { "BufReadPre", "BufNewFile" },
+      config = function()
+        local lspconfig = require("lspconfig")
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+        lspconfig.nixd.setup {
+          capabilities = capabilities
+        }
+        lspconfig.lua_ls.setup {
+          capabilities = capabilities
+        }
+      end,
+    },
+    {
+      name = "nvim-cmp",
+      dir = "@nvim_cmp@",
+      event = "VeryLazy",
+      dependencies = {
+        { name = "cmp-nvim-lsp", dir = "@cmp_nvim_lsp@" },
+        { name = "cmp-buffer", dir = "@cmp_buffer@" },
+        { name = "luasnip", dir = "@luasnip@" },
+        { name = "cmp-path", dir = "@cmp_path@"},
+        { name = "cmp-cmdline", dir = "@cmp_cmdline@"},
+      },
+      config = function()
+        local cmp = require("cmp")
+        cmp.setup({
+          snippet = {
+            expand = function()
+            end,
+          },
+          window = {
+          },
+          mapping = cmp.mapping.preset.insert({
+            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+            ['<C-f>'] = cmp.mapping.scroll_docs(4),
+            ['<C-Space>'] = cmp.mapping.complete(),
+            ['<C-e>'] = cmp.mapping.abort(),
+            ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          }),
+          sources = cmp.config.sources({
+            { name = "nvim_lsp" },
+            { name = "buffer" },
+            { name = "luasnip" },
+            { name = "path" },
+          }),
+        })
+
+        cmp.setup.cmdline({ '/', '?' }, {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = {
+            { name = 'buffer' }
+          }
+        })
+
+        cmp.setup.cmdline(':', {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = cmp.config.sources(
+            {
+              { name = 'path' }
+            },
+            {
+              { name = 'cmdline' }
+            }
+          ),
+          matching = { disallow_symbol_nonprefix_matching = false }
+        })
+      end,
+    }
   },
 })
