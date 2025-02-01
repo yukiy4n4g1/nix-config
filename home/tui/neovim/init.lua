@@ -118,12 +118,12 @@ require("lazy").setup({
       event = "VeryLazy",
       keys = {
         {
-          "<leader>bn",
+          "gn",
           "<Cmd>BufferNext<CR>",
           desc = "Buffer Next",
         },
         {
-          "<leader>bp",
+          "gp",
           "<Cmd>BufferPrevious<CR>",
           desc = "Buffer Previous",
         },
@@ -134,17 +134,7 @@ require("lazy").setup({
       dir = "@which_key_nvim@",
       event = "VeryLazy",
       opts = {
-        spec = {
-          { "<leader>f", group = "File/Find" },
-          { "<leader>g", group = "Git" },
-          {
-            "<leader>b",
-            group = "Buffer",
-            expand = function()
-              return require("which-key.extras").expand.buf()
-            end,
-          },
-        }
+        spec = {}
       },
       keys = {
         {
@@ -177,21 +167,14 @@ require("lazy").setup({
       },
       keys = {
         {
-          "<leader>ff",
+          "<leader>f",
           function()
             require("telescope.builtin").git_files()
           end,
           desc = "Find Files",
         },
         {
-          "<leader>fb",
-          function()
-            require("telescope.builtin").buffers()
-          end,
-          desc = "Find Buffers",
-        },
-        {
-          "<leader>bf",
+          "<leader>b",
           function()
             require("telescope.builtin").buffers()
           end,
