@@ -282,6 +282,11 @@ require("lazy").setup({
       event = "BufRead",
     },
     {
+      name = "nvim-treesitter-context",
+      dir = "@nvim_treesitter_context@",
+      event = "BufRead",
+    },
+    {
       name = "nvim-lspconfig",
       dir = "@nvim_lspconfig@",
       event = { "BufReadPre", "BufNewFile" },
