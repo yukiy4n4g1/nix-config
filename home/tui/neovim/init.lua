@@ -270,8 +270,12 @@ require("lazy").setup({
       name = "nvim-treesitter",
       dir = "@nvim_treesitter@",
       config = function()
+        vim.opt.runtimepath:append("@ts_parser_dir@")
+
         require("nvim-treesitter.configs").setup({
-          parser_install_dir = "@ts_parser_dir@",
+          highlight = {
+            enable = true,
+          },
         })
       end,
       event = "BufRead",
