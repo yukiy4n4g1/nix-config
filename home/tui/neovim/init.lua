@@ -12,6 +12,7 @@ opt.hidden = true
 opt.mouse = 'a'
 opt.number = true
 opt.ruler = false
+opt.scrolloff = 10
 opt.shiftround = true
 opt.shiftwidth = 2
 opt.smartcase = true
@@ -33,6 +34,7 @@ local keymap = vim.keymap
 
 keymap.set('n', 'j', 'gj')
 keymap.set('n', 'k', 'gk')
+keymap.set('n', 'x', '"_x')
 
 keymap.set('i', 'jk', '<ESC>')
 
