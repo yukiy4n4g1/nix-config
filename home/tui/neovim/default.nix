@@ -48,6 +48,7 @@ in
       luasnip = pkgs.vimPlugins.luasnip;
       cmp_path = pkgs.vimPlugins.cmp-path;
       cmp_cmdline = pkgs.vimPlugins.cmp-cmdline;
+      lspkind_nvim = pkgs.vimPlugins.lspkind-nvim;
     };
   };
 }

@@ -299,10 +299,28 @@ require("lazy").setup({
         { name = "luasnip", dir = "@luasnip@" },
         { name = "cmp-path", dir = "@cmp_path@"},
         { name = "cmp-cmdline", dir = "@cmp_cmdline@"},
+        { name = "lspkind-nvim", dir = "@lspkind_nvim@" }
       },
       config = function()
         local cmp = require("cmp")
+        local lspkind = require("lspkind")
+
         cmp.setup({
+          formatting = {
+            format = lspkind.cmp_format({
+              mode = "symbol",
+              maxwidth = {
+                menu = 50,
+                abbr = 50,
+              },
+              ellipsis_char = '...',
+              show_labelDetails = true,
+
+              before = function (entry, vim_item)
+                return vim_item
+              end,
+            })
+          },
           snippet = {
             expand = function()
             end,
