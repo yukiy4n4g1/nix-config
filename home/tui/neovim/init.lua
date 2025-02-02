@@ -297,7 +297,14 @@ require("lazy").setup({
           capabilities = capabilities
         }
         lspconfig.lua_ls.setup {
-          capabilities = capabilities
+          capabilities = capabilities,
+          settings = {
+            Lua = {
+              diagnostics = {
+                globals = { "vim" }
+              }
+            }
+          }
         }
       end,
     },
