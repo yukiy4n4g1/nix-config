@@ -80,13 +80,6 @@ require("lazy").setup({
           end,
           desc = "file Explorer",
         },
-        {
-          "<leader>be",
-          function()
-            require("neo-tree.command").execute({ source = "buffers", toggle = true, position = "right" })
-          end,
-          desc = "Buffer Explorer",
-        },
       },
     },
     {
@@ -162,6 +155,7 @@ require("lazy").setup({
     {
       name = "telescope.nvim",
       dir = "@telescope_nvim@",
+      cmd = { "Telescope" },
       dependencies = {
         { name = "plenary.nvim", dir = "@plenary_nvim@" },
       },
@@ -180,7 +174,31 @@ require("lazy").setup({
           end,
           desc = "Buffer Finder",
         },
+        {
+          "<leader>s",
+          function()
+            require("telescope.builtin").live_grep()
+          end,
+          desc = "Live Grep",
+        },
+
       },
+      config = function()
+        local actions = require("telescope.actions")
+        require("telescope").setup({
+          defaults = {
+            mappings = {
+              i = {
+                ["<esc>"] = actions.close
+              }
+            },
+            layout_config = {
+              prompt_position = "top"
+            },
+            sorting_strategy = "ascending",
+          }
+        })
+      end,
     },
     {
       name = "gitsigns.nvim",
