@@ -52,7 +52,7 @@ require("lazy").setup({
       dir = "@tokyonight_nvim@",
       lazy = false,
       config = function()
-        vim.cmd([[colorscheme tokyonight]])
+        vim.cmd([[colorscheme tokyonight-night]])
       end,
     },
     {
@@ -94,6 +94,7 @@ require("lazy").setup({
         require("lualine").setup({
           options = {
             globalstatus = true,
+            theme = "tokyonight-night",
           },
         })
       end,
