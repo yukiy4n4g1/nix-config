@@ -19,6 +19,7 @@ in
     extraPackages = with pkgs; [
       nixd
       lua-language-server
+      nodejs-slim # for copilot-lua
     ];
   };
   xdg.configFile = {
@@ -50,6 +51,8 @@ in
       cmp_cmdline = pkgs.vimPlugins.cmp-cmdline;
       lspkind_nvim = pkgs.vimPlugins.lspkind-nvim;
       nvim_treesitter_context = pkgs.vimPlugins.nvim-treesitter-context;
+      copilot_lua = pkgs.vimPlugins.copilot-lua;
+      copilot_cmp = pkgs.vimPlugins.copilot-cmp;
     };
   };
 }

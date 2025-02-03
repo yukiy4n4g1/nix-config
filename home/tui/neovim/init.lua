@@ -318,11 +318,16 @@ require("lazy").setup({
         { name = "luasnip", dir = "@luasnip@" },
         { name = "cmp-path", dir = "@cmp_path@"},
         { name = "cmp-cmdline", dir = "@cmp_cmdline@"},
-        { name = "lspkind-nvim", dir = "@lspkind_nvim@" }
+        { name = "lspkind-nvim", dir = "@lspkind_nvim@" },
       },
       config = function()
         local cmp = require("cmp")
         local lspkind = require("lspkind")
+        local has_words_before = function()
+          if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+          local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+          return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
+        end
 
         cmp.setup({
           formatting = {
@@ -334,6 +339,7 @@ require("lazy").setup({
               },
               ellipsis_char = '...',
               show_labelDetails = true,
+              symbol_map = { Copilot = "" },
 
               before = function (entry, vim_item)
                 return vim_item
@@ -352,9 +358,17 @@ require("lazy").setup({
             ['<C-Space>'] = cmp.mapping.complete(),
             ['<C-e>'] = cmp.mapping.abort(),
             ['<CR>'] = cmp.mapping.confirm({ select = true }),
+            ["<Tab>"] = vim.schedule_wrap(function(fallback)
+              if cmp.visible() and has_words_before() then
+                cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+              else
+                fallback()
+              end
+            end),
           }),
           sources = cmp.config.sources({
             { name = "nvim_lsp" },
+            { name = "copilot" },
             { name = "buffer" },
             { name = "luasnip" },
             { name = "path" },
@@ -381,6 +395,26 @@ require("lazy").setup({
           matching = { disallow_symbol_nonprefix_matching = false }
         })
       end,
-    }
+    },
+    {
+      name = "copilot.lua",
+      dir = "@copilot_lua@",
+      cmd = "Copilot",
+      event = "InsertEnter",
+      config = function()
+        require("copilot").setup({
+          suggestion = { enabled = false },
+          panel = { enabled = false },
+        })
+      end,
+    },
+    {
+      name = "copilot-cmp",
+      dir = "@copilot_cmp@",
+      event = { "InsertEnter", "LspAttach" },
+      config = function()
+        require("copilot_cmp").setup()
+      end,
+    },
   },
 })
