@@ -23,7 +23,6 @@ alias gpp='g++'
 alias sl='ls'
 alias chmod='chmod --preserve-root'
 alias chown='chown --preserve-root'
-alias yz='yazi'
 
 alias ls='ls --color=auto'
 alias ll='ls -alF'
