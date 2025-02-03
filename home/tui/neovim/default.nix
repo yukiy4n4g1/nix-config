@@ -19,6 +19,7 @@ in
     extraPackages = with pkgs; [
       nixd
       lua-language-server
+      markdown-oxide
       nodejs-slim # for copilot-lua
     ];
   };

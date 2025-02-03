@@ -306,6 +306,9 @@ require("lazy").setup({
             }
           }
         }
+        lspconfig["markdown-oxide"].setup {
+          capabilities = capabilities
+        }
       end,
     },
     {
