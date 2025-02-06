@@ -309,6 +309,9 @@ require("lazy").setup({
         lspconfig["markdown_oxide"].setup {
           capabilities = capabilities
         }
+        lspconfig["ts_ls"].setup {
+          capabilities = capabilities
+        }
       end,
     },
     {

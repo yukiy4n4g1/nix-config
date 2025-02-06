@@ -22,6 +22,8 @@ in
       nixd
       lua-language-server
       markdown-oxide
+      typescript-language-server
+
       nodejs-slim # for copilot-lua
     ];
   };

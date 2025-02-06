@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   home.username = builtins.getEnv "USER";
   home.homeDirectory = builtins.getEnv "HOME";
@@ -7,6 +5,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ../tui/neovim/default.nix
     ../tui/vim/default.nix
     ../tui/zsh/default.nix
     ../tui/eza.nix
