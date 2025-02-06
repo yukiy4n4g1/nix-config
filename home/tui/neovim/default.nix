@@ -11,6 +11,8 @@ let
     nix
     lua
     python
+    markdown
+    markdown_inline
   ];
 in
 {
@@ -54,6 +56,8 @@ in
       nvim_treesitter_context = pkgs.vimPlugins.nvim-treesitter-context;
       copilot_lua = pkgs.vimPlugins.copilot-lua;
       copilot_cmp = pkgs.vimPlugins.copilot-cmp;
+      bullets_vim = pkgs.vimPlugins.bullets-vim;
+      vim_table_mode = pkgs.vimPlugins.vim-table-mode;
     };
   };
 }

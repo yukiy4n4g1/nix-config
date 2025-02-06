@@ -306,7 +306,7 @@ require("lazy").setup({
             }
           }
         }
-        lspconfig["markdown-oxide"].setup {
+        lspconfig["markdown_oxide"].setup {
           capabilities = capabilities
         }
       end,
@@ -419,5 +419,15 @@ require("lazy").setup({
         require("copilot_cmp").setup()
       end,
     },
+    {
+      name = "bullets.vim",
+      dir = "@bullets_vim@",
+      ft = "markdown",
+    },
+    {
+      name = "vim-table-mode",
+      dir = "@vim_table_mode@",
+      ft = "markdown",
+    }
   },
 })
