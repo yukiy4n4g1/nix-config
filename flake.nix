@@ -65,6 +65,7 @@
 
       darwin = home-manager-unstable.lib.homeManagerConfiguration {
         pkgs = nixpkgs-unstable.legacyPackages.aarch64-darwin;
+        extraSpecialArgs = { pkgs-unstable = nixpkgs-unstable; };
         modules = [
           ./home/sets/darwin.nix
         ];
