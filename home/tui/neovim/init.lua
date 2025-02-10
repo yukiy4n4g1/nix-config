@@ -444,6 +444,11 @@ require("lazy").setup({
           }
         })
       end,
-    }
+    },
+    {
+      name = "nvim-surround",
+      dir = "@nvim_surround@",
+      event = "VeryLazy",
+    },
   },
 })

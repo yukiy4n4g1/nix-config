@@ -61,6 +61,7 @@ in
       bullets_vim = pkgs.vimPlugins.bullets-vim;
       vim_table_mode = pkgs.vimPlugins.vim-table-mode;
       no_neck_pain_nvim = pkgs.vimPlugins.no-neck-pain-nvim;
+      nvim_surround = pkgs.vimPlugins.nvim-surround;
     };
   };
 }
