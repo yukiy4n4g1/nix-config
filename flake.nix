@@ -19,7 +19,12 @@
 
   outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, nixos-wsl, ... }: {
     nixosConfigurations =  {
-      dell = nixpkgs.lib.nixosSystem {
+      dell = let 
+        pkgs-unstable = import nixpkgs-unstable {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
+      in nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/dell-inspiron/configuration.nix
@@ -27,9 +32,14 @@
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { pkgs-unstable = nixpkgs-unstable; };
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              inherit pkgs-unstable;
+            };
             
-            home-manager.users.yukiy4n4g1 = (import ./home/sets/linux-wayland.nix inputs);
+            home-manager.users.yukiy4n4g1 = (
+              import ./home/sets/linux-wayland.nix { inherit inputs pkgs-unstable; }
+            );
           }
         ];
       };
