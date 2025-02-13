@@ -9,8 +9,8 @@
       enkia.tokyo-night
       vscodevim.vim
       jnoortheen.nix-ide
-      vscode-extensions.github.copilot
-      vscode-extensions.github.copilot-chat
+      github.copilot
+      github.copilot-chat
     ] ++ pkgs-unstable.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "vscode-language-pack-ja";
@@ -25,5 +25,6 @@
         sha256 = "0k644ma94k6ygk6ys8rgmrz2q0ixjkvkik4393p44fking7k55id";
       }
     ];
+    userSettings = builtins.fromJSON (builtins.readFile ./settings.json);
   };
 }

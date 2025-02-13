@@ -6,6 +6,7 @@
   imports = [
     ../home.nix
 
+    ../gui/vscode/default.nix
     ../gui/packages.nix
     ../gui/brave.nix
     ../gui/fcitx.nix
@@ -17,7 +18,6 @@
     ../gui/kanshi.nix
     ../gui/sway/default.nix
     ../gui/swaylock.nix
-    ../gui/vscode.nix
     ../gui/waybar.nix
 
     ../tui/bash/default.nix

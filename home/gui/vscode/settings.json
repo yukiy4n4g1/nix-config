@@ -1,0 +1,123 @@
+{
+  "editor.fontFamily": "HackGen35ConsoleNF, monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 19,
+  "editor.minimap.enabled": false,
+  "editor.suggestSelection": "first",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.mouseWheelScrollSensitivity": 1,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+
+  "terminal.integrated.fontFamily": "HackGen35ConsoleNF, monospace",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.mouseWheelScrollSensitivity": 1,
+
+  "files.autoSave": "afterDelay",
+
+  "git.autofetch": true,
+  "git.suggestSmartCommit": false,
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "symbols",
+  "workbench.list.mouseWheelScrollSensitivity": 1,
+  "workbench.tree.indent": 12,
+  "workbench.activityBar.location": "top",
+  "workbench.sideBar.location": "left",
+
+  "window.title": "${rootName}",
+  "window.commandCenter": false,
+  "window.customMenuBarAltFocus": false,
+  "window.customTitleBarVisibility": "auto",
+  "window.enableMenuBarMnemonics": false,
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "compact",
+
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.visualstar": true,
+
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [ "j", "k" ],
+      "after": [ "<Esc>" ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [ "j" ],
+      "after": [ "g", "j" ]
+    },
+    {
+      "before": [ "k" ],
+      "after": [ "g", "k" ]
+    },
+    {
+      "before": [ "<C-n>" ],
+      "commands": [ ":nohl" ]
+    },
+    {
+      "before": [ "x" ],
+      "after": [ "\"", "_", "x" ]
+    },
+    {
+      "before": [ "s" ],
+      "after": [ "<leader>", "<leader>", "s", "<char>" ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [ "s" ],
+      "after": [ "\"", "_", "s" ]
+    },
+    {
+      "before": [ ">" ],
+      "after": [ ">", "g", "v" ]
+    },
+    {
+      "before": [ "<" ],
+      "after": [ "<", "g", "v" ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-b>": false,
+    "<C-c>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-v>": false,
+    "<C-w>": false,
+    "<C-x>": false,
+    "<C-z>": false
+  },
+
+  "javascript.format.semicolons": "insert",
+  "emmet.triggerExpansionOnTab": true,
+  
+  "[python]": {
+    "editor.insertSpaces": true
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
