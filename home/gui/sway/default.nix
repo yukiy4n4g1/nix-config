@@ -11,6 +11,13 @@
     enable = true;
     wrapperFeatures.gtk = true;
     checkConfig = false;
+    extraSessionCommands = ''
+      export INPUT_METHOD=fcitx
+      export QT_IM_MODULE=fcitx
+      export GTK_IM_MODULE=fcitx
+      export XMODIFIERS=@im=fcitx
+      export XIM_SERVERS=fcitx
+    '';
 
     config = {
       keybindings = {};
