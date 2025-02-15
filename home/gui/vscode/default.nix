@@ -2,7 +2,7 @@
 
 {
   programs.vscode = {
-    package = pkgs-unstable.vscode.fhs;
+    package = (pkgs-unstable.vscode.override { commandLineArgs = "--ozone-platform=x11"; }).fhs;
     enable = true;
     enableUpdateCheck = false;
     extensions = with pkgs-unstable.vscode-extensions; [
