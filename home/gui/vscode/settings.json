@@ -63,8 +63,12 @@
       "after": [ "g", "k" ]
     },
     {
-      "before": [ "<C-n>" ],
-      "commands": [ ":nohl" ]
+      "before": [ "g", "n" ],
+      "commands": [ "workbench.action.nextEditor" ]
+    },
+    {
+      "before": [ "g", "p" ],
+      "commands": [ "workbench.action.previousEditor" ]
     },
     {
       "before": [ "x" ],
