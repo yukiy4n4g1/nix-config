@@ -7,6 +7,7 @@
     htop
     fd
     ripgrep
+    file
   ];
 
   programs.fzf.enable = true;
@@ -18,4 +19,3 @@
     enableBashIntegration = true;
   };
 }
-
