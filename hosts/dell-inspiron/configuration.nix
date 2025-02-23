@@ -87,7 +87,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.yukiy4n4g1 = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "input" "ydotool" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "ydotool" "docker" ];
     packages = with pkgs; [
       firefox
     ];
@@ -166,6 +166,15 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   services.gnome.gnome-keyring.enable = true;
+
+  virtualisation.docker = {
+    enable = true;
+
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
