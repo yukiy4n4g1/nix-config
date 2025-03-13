@@ -29,6 +29,7 @@
   "workbench.tree.indent": 12,
   "workbench.activityBar.location": "top",
   "workbench.sideBar.location": "left",
+  "workbench.layoutControl.type": "menu",
 
   "window.title": "${rootName}",
   "window.commandCenter": false,
@@ -86,6 +87,10 @@
     {
       "before": [ "s" ],
       "after": [ "\"", "_", "s" ]
+    },
+    {
+      "before": [ "x" ],
+      "after": [ "\"", "_", "x" ]
     },
     {
       "before": [ ">" ],
