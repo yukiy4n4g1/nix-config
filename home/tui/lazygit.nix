@@ -10,4 +10,8 @@
       pager = "delta --dark --paging=never";
     };
   };
+
+  home.shellAliases = {
+    lg = "lazygit";
+  };
 }

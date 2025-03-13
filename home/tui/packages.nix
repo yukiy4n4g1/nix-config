@@ -18,4 +18,8 @@
     enable = true;
     enableBashIntegration = true;
   };
+
+  home.shellAliases = {
+    yz = "yazi";
+  };
 }
