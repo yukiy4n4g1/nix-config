@@ -26,6 +26,7 @@
     ../tui/eza.nix
     ../tui/git.nix
     ../tui/helix.nix
+    ../tui/k8s.nix
     ../tui/lazygit.nix
     ../tui/packages.nix
     ../tui/starship.nix
