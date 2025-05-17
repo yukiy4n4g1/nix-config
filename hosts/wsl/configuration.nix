@@ -5,12 +5,12 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   users.users.yukiy4n4g1 = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -23,4 +23,13 @@
   environment.variables.EDITOR = "vim";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  virtualisation.docker = {
+    enable = true;
+
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 }
