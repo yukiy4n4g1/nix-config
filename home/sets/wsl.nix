@@ -1,5 +1,3 @@
-{ config, pkgs, system, ... }:
-
 {
 
   imports = [
@@ -15,5 +13,6 @@
     ../tui/starship.nix
     ../tui/vim/default.nix
     ../tui/wslu.nix
+    ../tui/yazi.nix
   ];
 }

@@ -13,13 +13,4 @@
   programs.fzf.enable = true;
 
   programs.gh.enable = true;
-
-  programs.yazi = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
-  home.shellAliases = {
-    yz = "yazi";
-  };
 }

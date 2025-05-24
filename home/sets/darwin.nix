@@ -14,5 +14,6 @@
     ../tui/mise.nix
     ../tui/packages.nix
     ../tui/starship.nix
+    ../tui/yazi.nix
   ];
 }

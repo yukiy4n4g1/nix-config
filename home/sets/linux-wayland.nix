@@ -30,5 +30,6 @@
     ../tui/lazygit.nix
     ../tui/packages.nix
     ../tui/starship.nix
+    ../tui/yazi.nix
   ];
 }
