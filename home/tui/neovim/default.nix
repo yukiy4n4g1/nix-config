@@ -28,8 +28,7 @@ in
     ];
   };
   xdg.configFile = {
-    "nvim/init.lua".source = pkgs.substituteAll {
-      src = ./init.lua;
+    "nvim/init.lua".source = pkgs.replaceVars ./init.lua {
       lazy_nvim = pkgs.vimPlugins.lazy-nvim;
       tokyonight_nvim = pkgs.vimPlugins.tokyonight-nvim;
       neo_tree_nvim = pkgs.vimPlugins.neo-tree-nvim;
