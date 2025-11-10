@@ -172,7 +172,8 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-color-emoji
-    (nerdfonts.override { fonts = [ "Ubuntu" "JetBrainsMono" ]; })
+    nerd-fonts.ubuntu
+    nerd-fonts.jetbrains-mono
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
