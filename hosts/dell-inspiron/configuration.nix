@@ -90,6 +90,8 @@
     extraGroups = [ "networkmanager" "wheel" "input" "ydotool" "docker" ];
     packages = with pkgs; [
       firefox
+      flatpak
+      gnome-software
     ];
   };
 
@@ -196,6 +198,9 @@
 
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+
+  services.flatpak.enable = true;
+  xdg.portal.enable = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
