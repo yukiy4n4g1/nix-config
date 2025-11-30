@@ -201,6 +201,7 @@
 
   services.flatpak.enable = true;
   xdg.portal.enable = true;
+  xdg.portal.config.common.default = "*";
 
   services.displayManager.sessionPackages = [ pkgs.sway ];
 
