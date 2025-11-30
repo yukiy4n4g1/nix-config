@@ -432,19 +432,19 @@ require("lazy").setup({
       dir = "@vim_table_mode@",
       ft = "markdown",
     },
-    {
-      name = "no-neck-pain.nvim",
-      dir = "@no_neck_pain_nvim@",
-      event = "VeryLazy",
-      config = function()
-        require("no-neck-pain").setup({
-          autocmds = {
-            enableOnVimEnter = true,
-            enableOnTabEnter = true,
-          }
-        })
-      end,
-    },
+    -- {
+    --   name = "no-neck-pain.nvim",
+    --   dir = "@no_neck_pain_nvim@",
+    --   event = "VeryLazy",
+    --   config = function()
+    --     require("no-neck-pain").setup({
+    --       autocmds = {
+    --         enableOnVimEnter = true,
+    --         enableOnTabEnter = true,
+    --       }
+    --     })
+    --   end,
+    -- },
     {
       name = "nvim-surround",
       dir = "@nvim_surround@",
