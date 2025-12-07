@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [ delta ];
-  programs.git.delta.enable = true;
+  programs.delta.enable = true;
   programs.lazygit = {
     enable = true;
     settings.git.paging = {
