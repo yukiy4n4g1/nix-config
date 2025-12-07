@@ -5,10 +5,11 @@
   programs.delta.enable = true;
   programs.lazygit = {
     enable = true;
-    settings.git.paging = {
-      colorArg = "always";
-      pager = "delta --dark --paging=never";
-    };
+    settings.git.pagers = [
+      {
+        pager = "delta --dark --paging=never";
+      }
+    ];
   };
 
   home.shellAliases = {
