@@ -16,11 +16,8 @@
         hide-when-typing = "yes";
       };
 
-      cursor = {
-        color = "283457 c0caf5";
-      };
-
       colors = {
+        cursor = "283457 c0caf5";
         foreground = "c0caf5";
         background = "1a1b26";
         selection-foreground = "c0caf5";
