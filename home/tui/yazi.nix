@@ -4,7 +4,7 @@
     enableBashIntegration = true;
 
     settings = {
-      manager = {
+      mgr = {
         show_hidden = true;
       };
     };
