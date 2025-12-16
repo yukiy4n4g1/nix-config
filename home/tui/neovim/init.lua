@@ -44,6 +44,25 @@ keymap.set("v", ">", ">gv")
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.lsp.enable({
+  "nixd",
+  "lua_ls",
+  "markdown_oxide",
+  "ts_ls",
+})
+
+vim.lsp.config.lua_ls = {
+  settings = {
+    Lua = {
+      workspace = {
+        library = {
+          vim.env.VIMRUNTIME .. "/lua"
+        }
+      }
+    }
+  }
+}
+
 require("lazy").setup({
   defaults = { lazy = true },
   spec = {
@@ -290,29 +309,6 @@ require("lazy").setup({
       name = "nvim-lspconfig",
       dir = "@nvim_lspconfig@",
       event = { "BufReadPre", "BufNewFile" },
-      config = function()
-        local lspconfig = require("lspconfig")
-        local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        lspconfig.nixd.setup {
-          capabilities = capabilities
-        }
-        lspconfig.lua_ls.setup {
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = { "vim" }
-              }
-            }
-          }
-        }
-        lspconfig["markdown_oxide"].setup {
-          capabilities = capabilities
-        }
-        lspconfig["ts_ls"].setup {
-          capabilities = capabilities
-        }
-      end,
     },
     {
       name = "nvim-cmp",
@@ -334,6 +330,10 @@ require("lazy").setup({
           local line, col = unpack(vim.api.nvim_win_get_cursor(0))
           return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
         end
+
+        vim.lsp.config('*', {
+          capabilities = require('cmp_nvim_lsp').default_capabilities(),
+        })
 
         cmp.setup({
           formatting = {
