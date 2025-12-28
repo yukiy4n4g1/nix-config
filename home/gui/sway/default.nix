@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     swaybg
     swayidle
-    cosmic-wallpapers
+    nixos-artwork.wallpapers.nineish-dark-gray
   ];
 
   wayland.windowManager.sway = {
@@ -25,7 +25,7 @@
 
       output = {
         "*" = {
-          bg = "${config.xdg.stateHome}/home-manager/gcroots/current-home/home-path/share/backgrounds/cosmic/webb-inspired-wallpaper-system76.jpg fill";
+          bg = "${config.xdg.stateHome}/home-manager/gcroots/current-home/home-path/share/backgrounds/nixos/nix-wallpaper-nineish-dark-gray.png fill";
         };
       };
 
