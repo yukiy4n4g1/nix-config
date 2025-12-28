@@ -105,6 +105,7 @@
     curl
     fusuma
     usbutils
+    nixos-artwork.wallpapers.nineish-dark-gray
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -205,7 +206,15 @@
 
   services.displayManager.sessionPackages = [ pkgs.sway ];
 
-  programs.regreet.enable = true;
+  environment.pathsToLink = [ "/share/backgrounds" ]; # これを入れないとbackgroundsのディレクトリが現れない
+
+  programs.regreet = {
+    enable = true;
+    settings = {
+      background.path = "/run/current-system/sw/share/backgrounds/nixos/nix-wallpaper-nineish-dark-gray.png";
+      fit = "Cover";
+    };
+  };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
