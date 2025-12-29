@@ -18,7 +18,27 @@
   };
 
   outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, nixos-wsl, ... }: {
+
     nixosConfigurations =  {
+      x1 = nixpkgs-unstable.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/x1/configuration.nix
+
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
+
+            home-manager.users.yukiy4n4g1 = (
+              import ./home/sets/linux-cosmic.nix
+            );
+          }
+        ];
+      };
+
       dell = let 
         pkgs-unstable = import nixpkgs-unstable {
           system = "x86_64-linux";
