@@ -2,7 +2,9 @@
   imports = [
     ../home.nix
 
-    # ../gui/fcitx.nix
+    ../gui/fcitx.nix
+    ../gui/firefox.nix
+    ../gui/foot.nix
 
     ../tui/bash/default.nix
     ../tui/vim/default.nix
