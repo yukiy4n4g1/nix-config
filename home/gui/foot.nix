@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   programs.foot = {
     enable = true;
@@ -8,7 +6,7 @@
       main = {
         term = "xterm-256color";
 
-        font = "HackGen35ConsoleNF:size=13";
+        font = "HackGen35ConsoleNF:size=11";
         # dpi-aware = "yes";
       };
 
