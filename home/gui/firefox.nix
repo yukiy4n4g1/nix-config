@@ -12,6 +12,10 @@
         "sidebar.revamp" = true;
         "sidebar.verticalTabs" = true;
         "sidebar.visibility" = "expand-on-hover";
+
+        # Altキーでのメニューアクセスを無効化
+        "ui.key.menuAccessKeyFocuses" = false;
+        "ui.key.menuAccessKey" = 0;
       };
     };
   };
