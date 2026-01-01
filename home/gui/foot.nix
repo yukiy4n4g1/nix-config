@@ -4,7 +4,9 @@
 
     settings = {
       main = {
-        term = "xterm-256color";
+        app-id = "foot";
+        locked-title = "no";
+        term = "foot";
 
         font = "HackGen35ConsoleNF:size=11";
         # dpi-aware = "yes";
