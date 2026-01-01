@@ -15,5 +15,6 @@
     ../tui/packages.nix
     ../tui/starship.nix
     ../tui/yazi.nix
+    ../tui/zellij.nix
   ];
 }
