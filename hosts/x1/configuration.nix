@@ -119,6 +119,21 @@
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
 
+  # power-management
+  services.power-profiles-daemon.enable = false; # tlpと競合するために無効化
+  powerManagement.enable = true;
+  services.thermald.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
+
+      START_CHARGE_THRESH_BAT0 = 50;
+      STOP_CHARGE_THRESH_BAT0 = 80;
+    };
+  };
+
+  # enable flake
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   fonts.packages = with pkgs; [
