@@ -44,16 +44,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-
-  # Enable the GNOME Desktop Environment.
-  # services.displayManager.gdm.enable = true;
-  # services.desktopManager.gnome.enable = true;
-
   # COSMIC Desktop
   services.displayManager.cosmic-greeter.enable = true;
   services.desktopManager.cosmic.enable = true;
-
-
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -63,8 +56,6 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
