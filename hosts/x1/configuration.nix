@@ -70,7 +70,13 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.yukiy4n4g1 = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "docker"
+      "input" # for fusuma
+      "ydotool"
+    ];
     packages = with pkgs; [
       tree
     ];
@@ -80,6 +86,7 @@
     vim
     wget
     git
+    fusuma
   ];
 
   # Set the default editor to vim
@@ -125,6 +132,17 @@
 
   # enable flake
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  virtualisation.docker = {
+    enable = true;
+
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
+  programs.ydotool.enable = true;
 
   fonts.packages = with pkgs; [
     noto-fonts
