@@ -5,6 +5,7 @@
     ../gui/fcitx.nix
     ../gui/firefox.nix
     ../gui/foot.nix
+    ../gui/fusuma.nix
 
     ../tui/bash/default.nix
     ../tui/vim/default.nix

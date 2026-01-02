@@ -3,7 +3,10 @@
 {
   services.fusuma = {
     enable = true;
-    extraPackages = with pkgs; [ ydotool ];
+    extraPackages = with pkgs; [
+      ydotool
+      coreutils # unameがないとエラーになった
+    ];
     settings = {
       threshold = {
         swipe = 0.1;
@@ -14,10 +17,11 @@
       swipe = {
         "3" = {
           left = {
-            command = "ydotool click 0xC3";
+            # programs.ydotool.enableで有効にしたもののソケットを使う
+            command = "YDOTOOL_SOCKET=/run/ydotoold/socket ydotool click 0xC3";
           };
           right = {
-            command = "ydotool click 0xC4";
+            command = "YDOTOOL_SOCKET=/run/ydotoold/socket ydotool click 0xC4";
           };
         };
       };
