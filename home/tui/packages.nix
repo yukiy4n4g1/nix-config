@@ -13,4 +13,9 @@
   programs.fzf.enable = true;
 
   programs.gh.enable = true;
+
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+  };
 }
