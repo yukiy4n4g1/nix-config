@@ -4,6 +4,7 @@
 
     settings = {
       theme = "tokyo-night";
+      default_mode = "locked";
     };
   };
 }
