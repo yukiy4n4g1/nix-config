@@ -153,6 +153,23 @@
     hackgen-nf-font
   ];
 
+  services.keyd = {
+    enable = true;
+
+    keyboards = {
+      default = {
+        ids = [ "*" ];
+        settings = {
+          main = {
+            capslock = "overload(control, esc)";
+            muhenkan = "overload(meta, hanja)";
+            henkan = "hangeul";
+          };
+        };
+      };
+    };
+  };
+
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   #
