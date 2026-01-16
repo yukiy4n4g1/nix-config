@@ -292,7 +292,7 @@ require("lazy").setup({
       config = function()
         vim.opt.runtimepath:append("@ts_parser_dir@")
 
-        require("nvim-treesitter.configs").setup({
+        require("nvim-treesitter.config").setup({
           highlight = {
             enable = true,
           },
