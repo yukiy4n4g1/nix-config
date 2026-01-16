@@ -45,8 +45,8 @@
   services.xserver.enable = true;
 
   # COSMIC Desktop
-  services.displayManager.cosmic-greeter.enable = true;
-  services.desktopManager.cosmic.enable = true;
+  # services.displayManager.cosmic-greeter.enable = true;
+  # services.desktopManager.cosmic.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -87,6 +87,7 @@
     wget
     git
     fusuma
+    nixos-artwork.wallpapers.nineish-dark-gray
   ];
 
   # Set the default editor to vim
@@ -178,7 +179,24 @@
 
   nix.settings.auto-optimise-store = true;
 
-  # This option defines the first version of NixOS you have installed on this particular machine,
+  environment.pathsToLink = [ "/share/backgrounds" ]; # これを入れないとbackgroundsのディレクトリが現れない
+
+  services.displayManager.sessionPackages = [ pkgs.niri ];
+
+  programs.regreet = {
+    enable = true;
+    settings = {
+      background.path = "/run/current-system/sw/share/backgrounds/nixos/nix-wallpaper-nineish-dark-gray.png";
+      fit = "Cover";
+    };
+  };
+
+  security.polkit.enable = true;
+  security.pam.services.swaylock = {};
+
+  services.upower.enable = true; # for ashell
+
+ # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   #
   # Most users should NEVER change this value after the initial install, for any reason,

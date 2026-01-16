@@ -34,7 +34,7 @@
             };
 
             home-manager.users.yukiy4n4g1 = (
-              import ./home/sets/linux-cosmic.nix
+              import ./home/sets/niri.nix
             );
           }
         ];
