@@ -6,8 +6,10 @@
     ../gui/firefox.nix
     ../gui/foot.nix
     ../gui/fusuma.nix
+    ../gui/packages.nix
 
     ../tui/bash/default.nix
+    ../tui/neovim/default.nix
     ../tui/vim/default.nix
     ../tui/eza.nix
     ../tui/git.nix
