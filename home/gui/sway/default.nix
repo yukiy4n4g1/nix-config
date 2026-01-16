@@ -2,8 +2,12 @@
 
 {
   home.packages = with pkgs; [
+    brightnessctl
+    nwg-displays
     swaybg
     swayidle
+    wofi
+
     nixos-artwork.wallpapers.nineish-dark-gray
   ];
 
