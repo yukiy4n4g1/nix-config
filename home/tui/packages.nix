@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     bat
-    neofetch
+    fastfetch
     htop
     fd
     ripgrep
