@@ -11,8 +11,4 @@
       }
     ];
   };
-
-  home.shellAliases = {
-    lg = "lazygit";
-  };
 }
