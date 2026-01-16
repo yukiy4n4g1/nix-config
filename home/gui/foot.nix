@@ -4,8 +4,6 @@
 
     settings = {
       main = {
-        app-id = "foot";
-        locked-title = "no";
         term = "foot";
 
         font = "HackGen35ConsoleNF:size=11";
@@ -14,6 +12,10 @@
 
       mouse = {
         hide-when-typing = "yes";
+      };
+
+      csd = {
+        preferred = "none";
       };
 
       colors = {
