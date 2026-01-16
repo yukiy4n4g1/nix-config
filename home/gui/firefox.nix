@@ -4,6 +4,7 @@
 
     profiles.nix = {
       settings = {
+        "intl.locale.requested" = "ja,en-US";
         "browser.search.region" = "JP";
         "doh-rollout.home-region" = "JP";
         "font.name.monospace.ja" = "Noto Sans Mono";
@@ -11,7 +12,7 @@
         "font.name.serif.ja" = "Noto Serif CJK JP";
         "sidebar.revamp" = true;
         "sidebar.verticalTabs" = true;
-        "sidebar.visibility" = "expand-on-hover";
+        "sidebar.visibility" = "always-show";
 
         # Altキーでのメニューアクセスを無効化
         "ui.key.menuAccessKeyFocuses" = false;
