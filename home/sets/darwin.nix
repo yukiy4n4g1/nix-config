@@ -9,7 +9,7 @@
     ../tui/vim/default.nix
     ../tui/zsh/default.nix
     ../tui/eza.nix
-    ../tui/helix.nix
+    ../tui/helix/default.nix
     ../tui/lazygit.nix
     ../tui/mise.nix
     ../tui/packages.nix
