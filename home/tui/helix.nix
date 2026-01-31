@@ -23,6 +23,12 @@
             '':set mouse false''
             '':set mouse true''
           ];
+          "'" = {
+            g = [
+              '':sh zellij run -c -f -x 5%% -y 5%% --width 90%% --height 90%% -- lazygit''
+              '':reload-all''
+            ];
+          };
         };
 
         insert = {
