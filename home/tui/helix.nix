@@ -39,6 +39,14 @@
         true-color = true;
         end-of-line-diagnostics = "hint";
 
+        auto-save = {
+          focus-lost = true;
+          after-delay = {
+            enable = true;
+            timeout = 3000;
+          };
+        };
+
         cursor-shape = {
           insert = "bar";
           normal = "block";
