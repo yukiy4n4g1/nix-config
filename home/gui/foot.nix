@@ -18,6 +18,10 @@
         preferred = "none";
       };
 
+      security = {
+        osc52 = "enabled";
+      };
+
       colors = {
         cursor = "283457 c0caf5";
         foreground = "c0caf5";
