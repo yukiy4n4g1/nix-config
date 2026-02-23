@@ -34,7 +34,7 @@
             };
 
             home-manager.users.yukiy4n4g1 = (
-              import ./modules/home-manager/sets/niri.nix
+              import ./modules/home-manager/x1.nix
             );
           }
         ];
@@ -59,7 +59,7 @@
             };
             
             home-manager.users.yukiy4n4g1 = (
-              import ./modules/home-manager/sets/linux-wayland.nix { inherit inputs pkgs-unstable; }
+              import ./modules/home-manager/dell.nix { inherit inputs pkgs-unstable; }
             );
           }
         ];
@@ -79,7 +79,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.yukiy4n4g1 = import ./modules/home-manager/sets/wsl.nix;
+            home-manager.users.yukiy4n4g1 = import ./modules/home-manager/wsl.nix;
           }
         ];
       };
@@ -98,7 +98,7 @@
         pkgs = nixpkgs-unstable.legacyPackages.aarch64-darwin;
         extraSpecialArgs = { pkgs-unstable = nixpkgs-unstable; };
         modules = [
-          ./modules/home-manager/sets/darwin.nix
+          ./modules/home-manager/darwin.nix
         ];
       };
     };
