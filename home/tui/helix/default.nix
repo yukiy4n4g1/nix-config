@@ -34,6 +34,12 @@
         insert = {
           j = {
             k = "normal_mode";
+            j = { k = [
+              "move_char_left"
+              ":append-output echo -n j"
+              "move_char_right"
+              "normal_mode"
+            ]; };
           };
         };
       };
