@@ -4,11 +4,10 @@
 
     ../gui/niri/ashell.nix
     ../gui/niri/default.nix
-    #../gui/niri/waybar.nix
     ../gui/fcitx.nix
     ../gui/firefox.nix
     ../gui/foot.nix
-    ../gui/fusuma.nix
+    # ../gui/fusuma.nix # niriのジェスチャーと重複するので無効にする
     ../gui/kanshi.nix
     ../gui/packages.nix
     ../gui/swaylock.nix
