@@ -34,7 +34,7 @@
             };
 
             home-manager.users.yukiy4n4g1 = (
-              import ./home/sets/niri.nix
+              import ./modules/home-manager/sets/niri.nix
             );
           }
         ];
@@ -59,7 +59,7 @@
             };
             
             home-manager.users.yukiy4n4g1 = (
-              import ./home/sets/linux-wayland.nix { inherit inputs pkgs-unstable; }
+              import ./modules/home-manager/sets/linux-wayland.nix { inherit inputs pkgs-unstable; }
             );
           }
         ];
@@ -79,7 +79,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.yukiy4n4g1 = import ./home/sets/wsl.nix;
+            home-manager.users.yukiy4n4g1 = import ./modules/home-manager/sets/wsl.nix;
           }
         ];
       };
@@ -89,9 +89,8 @@
       pop = home-manager-unstable.lib.homeManagerConfiguration {
         pkgs = nixpkgs-unstable.legacyPackages.x86_64-linux;
         modules = [
-          ./home/home.nix
-          ./home/tui/default.nix
-          ./home/gui/base.nix
+          ./modules/home-manager/home.nix
+          ./modules/home-manager/gui/base.nix
         ];
       };
 
@@ -99,7 +98,7 @@
         pkgs = nixpkgs-unstable.legacyPackages.aarch64-darwin;
         extraSpecialArgs = { pkgs-unstable = nixpkgs-unstable; };
         modules = [
-          ./home/sets/darwin.nix
+          ./modules/home-manager/sets/darwin.nix
         ];
       };
     };
