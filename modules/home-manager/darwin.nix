@@ -12,7 +12,7 @@
     tui/helix/default.nix
     tui/lazygit.nix
     tui/mise.nix
-    tui/packages.nix
+    tui/cli-packages.nix
     tui/starship.nix
     tui/yazi.nix
   ];

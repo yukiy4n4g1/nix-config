@@ -9,7 +9,7 @@
     tui/helix/default.nix
     tui/lazygit.nix
     tui/neovim/default.nix
-    tui/packages.nix
+    tui/cli-packages.nix
     tui/starship.nix
     tui/vim/default.nix
     tui/wslu.nix

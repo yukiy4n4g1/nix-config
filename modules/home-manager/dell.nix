@@ -7,7 +7,7 @@
     ./home.nix
 
     gui/vscode/default.nix
-    gui/packages.nix
+    gui/gui-packages.nix
     gui/brave.nix
     gui/fcitx.nix
     gui/fonts.nix
@@ -28,7 +28,7 @@
     tui/helix/default.nix
     tui/k8s.nix
     tui/lazygit.nix
-    tui/packages.nix
+    tui/cli-packages.nix
     tui/starship.nix
     tui/yazi.nix
   ];
