@@ -2,26 +2,26 @@
   imports = [
     ./home.nix
 
-    gui/niri/ashell.nix
-    gui/niri/default.nix
-    gui/fcitx.nix
-    gui/firefox.nix
-    gui/foot.nix
-    # gui/fusuma.nix # niriのジェスチャーと重複するので無効にする
-    gui/kanshi.nix
-    gui/gui-packages.nix
-    gui/swaylock.nix
+    ./dotfiles/niri/ashell.nix
+    ./dotfiles/niri/default.nix
+    ./dotfiles/fcitx.nix
+    ./dotfiles/firefox.nix
+    ./dotfiles/foot.nix
+    # ./dotfiles/fusuma.nix # niriのジェスチャーと重複するので無効にする
+    ./dotfiles/kanshi.nix
+    ./dotfiles/gui-packages.nix
+    ./dotfiles/swaylock.nix
 
-    tui/bash/default.nix
-    tui/neovim/default.nix
-    tui/vim/default.nix
-    tui/eza.nix
-    tui/git.nix
-    tui/helix/default.nix
-    tui/lazygit.nix
-    tui/cli-packages.nix
-    tui/starship.nix
-    tui/yazi.nix
-    tui/zellij.nix
+    ./dotfiles/bash/default.nix
+    ./dotfiles/neovim/default.nix
+    ./dotfiles/vim/default.nix
+    ./dotfiles/eza.nix
+    ./dotfiles/git.nix
+    ./dotfiles/helix/default.nix
+    ./dotfiles/lazygit.nix
+    ./dotfiles/cli-packages.nix
+    ./dotfiles/starship.nix
+    ./dotfiles/yazi.nix
+    ./dotfiles/zellij.nix
   ];
 }

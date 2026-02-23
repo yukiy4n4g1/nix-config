@@ -6,30 +6,30 @@
   imports = [
     ./home.nix
 
-    gui/vscode/default.nix
-    gui/gui-packages.nix
-    gui/brave.nix
-    gui/fcitx.nix
-    gui/fonts.nix
-    gui/foot.nix
-    gui/fusuma.nix
-    gui/gtk.nix
-    gui/hyprland.nix
-    gui/kanshi.nix
-    gui/sway/default.nix
-    gui/swaylock.nix
-    gui/waybar.nix
+    ./dotfiles/vscode/default.nix
+    ./dotfiles/gui-packages.nix
+    ./dotfiles/brave.nix
+    ./dotfiles/fcitx.nix
+    ./dotfiles/fonts.nix
+    ./dotfiles/foot.nix
+    ./dotfiles/fusuma.nix
+    ./dotfiles/gtk.nix
+    ./dotfiles/hyprland.nix
+    ./dotfiles/kanshi.nix
+    ./dotfiles/sway/default.nix
+    ./dotfiles/swaylock.nix
+    ./dotfiles/waybar.nix
 
-    tui/bash/default.nix
-    tui/neovim/default.nix
-    tui/vim/default.nix
-    tui/eza.nix
-    tui/git.nix
-    tui/helix/default.nix
-    tui/k8s.nix
-    tui/lazygit.nix
-    tui/cli-packages.nix
-    tui/starship.nix
-    tui/yazi.nix
+    ./dotfiles/bash/default.nix
+    ./dotfiles/neovim/default.nix
+    ./dotfiles/vim/default.nix
+    ./dotfiles/eza.nix
+    ./dotfiles/git.nix
+    ./dotfiles/helix/default.nix
+    ./dotfiles/k8s.nix
+    ./dotfiles/lazygit.nix
+    ./dotfiles/cli-packages.nix
+    ./dotfiles/starship.nix
+    ./dotfiles/yazi.nix
   ];
 }

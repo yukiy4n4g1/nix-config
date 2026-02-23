@@ -3,16 +3,16 @@
   imports = [
     ./home.nix
 
-    tui/bash/default.nix
-    tui/eza.nix
-    tui/git.nix
-    tui/helix/default.nix
-    tui/lazygit.nix
-    tui/neovim/default.nix
-    tui/cli-packages.nix
-    tui/starship.nix
-    tui/vim/default.nix
-    tui/wslu.nix
-    tui/yazi.nix
+    ./dotfiles/bash/default.nix
+    ./dotfiles/eza.nix
+    ./dotfiles/git.nix
+    ./dotfiles/helix/default.nix
+    ./dotfiles/lazygit.nix
+    ./dotfiles/neovim/default.nix
+    ./dotfiles/cli-packages.nix
+    ./dotfiles/starship.nix
+    ./dotfiles/vim/default.nix
+    ./dotfiles/wslu.nix
+    ./dotfiles/yazi.nix
   ];
 }

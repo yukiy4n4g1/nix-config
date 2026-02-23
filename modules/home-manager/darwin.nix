@@ -5,15 +5,15 @@
   programs.home-manager.enable = true;
 
   imports = [
-    tui/neovim/default.nix
-    tui/vim/default.nix
-    tui/zsh/default.nix
-    tui/eza.nix
-    tui/helix/default.nix
-    tui/lazygit.nix
-    tui/mise.nix
-    tui/cli-packages.nix
-    tui/starship.nix
-    tui/yazi.nix
+    ./dotfiles/neovim/default.nix
+    ./dotfiles/vim/default.nix
+    ./dotfiles/zsh/default.nix
+    ./dotfiles/eza.nix
+    ./dotfiles/helix/default.nix
+    ./dotfiles/lazygit.nix
+    ./dotfiles/mise.nix
+    ./dotfiles/cli-packages.nix
+    ./dotfiles/starship.nix
+    ./dotfiles/yazi.nix
   ];
 }
