@@ -15,5 +15,7 @@
     ./dotfiles/cli-packages.nix
     ./dotfiles/starship.nix
     ./dotfiles/yazi.nix
+    ./dotfiles/zellij.nix
+    ./dotfiles/k8s.nix
   ];
 }
