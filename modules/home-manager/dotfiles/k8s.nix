@@ -5,7 +5,9 @@
     kubectl
     kind
     k9s
+    kustomize
   ];
+
   home.shellAliases = {
     k9s = "LANG=\"en_US.UTF-8\" LC_ALL=\"en_US.UTF-8\" k9s";
   };
