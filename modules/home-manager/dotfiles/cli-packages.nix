@@ -8,6 +8,7 @@
     fd
     ripgrep
     file
+    mcat
   ];
 
   programs.fzf.enable = true;
