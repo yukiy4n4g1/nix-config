@@ -13,6 +13,7 @@
     ./dotfiles/lazygit.nix
     ./dotfiles/mise.nix
     ./dotfiles/cli-packages.nix
+    ./dotfiles/colima.nix
     ./dotfiles/starship.nix
     ./dotfiles/yazi.nix
     ./dotfiles/zellij.nix
