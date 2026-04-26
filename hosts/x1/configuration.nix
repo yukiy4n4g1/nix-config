@@ -82,6 +82,8 @@
     ];
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -204,6 +206,14 @@
   hardware.trackpoint = {
     enable = true;
     sensitivity = 255;
+  };
+
+  programs.steam = {
+    enable = true;
+
+    package = pkgs.steam.override {
+      extraArgs = "-system-composer"; # Steamの画面がブラックアウトしなくなる
+    };
   };
 
  # This option defines the first version of NixOS you have installed on this particular machine,
