@@ -22,7 +22,8 @@
         osc52 = "enabled";
       };
 
-      colors = {
+      # tokyonight-night
+      colors-dark = {
         cursor = "283457 c0caf5";
         foreground = "c0caf5";
         background = "1a1b26";
