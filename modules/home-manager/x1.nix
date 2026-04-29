@@ -11,6 +11,7 @@
     ./dotfiles/kanshi.nix
     ./dotfiles/gui-packages.nix
     ./dotfiles/swaylock.nix
+    ./dotfiles/zed-editor.nix
 
     ./dotfiles/bash/default.nix
     ./dotfiles/neovim/default.nix
