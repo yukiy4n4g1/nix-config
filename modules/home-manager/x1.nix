@@ -17,6 +17,7 @@
     ./dotfiles/neovim/default.nix
     ./dotfiles/vim/default.nix
     ./dotfiles/eza.nix
+    ./dotfiles/gemini-cli.nix
     ./dotfiles/git.nix
     ./dotfiles/helix/default.nix
     ./dotfiles/lazygit.nix
