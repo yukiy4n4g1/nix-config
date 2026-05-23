@@ -20,6 +20,11 @@
     nixvim = {
       url = "github:nix-community/nixvim";
     };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, home-manager-unstable, nixos-wsl, ... }: {

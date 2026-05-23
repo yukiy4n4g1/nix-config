@@ -4,6 +4,7 @@
 
     ./dotfiles/niri/ashell.nix
     ./dotfiles/niri/default.nix
+    ./dotfiles/niri/noctalia.nix
     ./dotfiles/fcitx.nix
     ./dotfiles/firefox.nix
     ./dotfiles/foot.nix

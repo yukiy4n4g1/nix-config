@@ -20,7 +20,7 @@
 
   xdg.configFile = {
     "niri/config.kdl".source = pkgs.replaceVars ./config.kdl {
-      background_image_path = "${config.xdg.stateHome}/home-manager/gcroots/current-home/home-path/share/backgrounds/nixos/nix-wallpaper-nineish-dark-gray.png";
+      # background_image_path = "${config.xdg.stateHome}/home-manager/gcroots/current-home/home-path/share/backgrounds/nixos/nix-wallpaper-nineish-dark-gray.png";
       # DEFAULT_AUDIO_SINK = "@DEFAULT_AUDIO_SINK@";
       # DEFAULT_AUDIO_SOURCE = "@DEFAULT_AUDIO_SOURCE@";
       DEFAULT_AUDIO_SINK = null;
