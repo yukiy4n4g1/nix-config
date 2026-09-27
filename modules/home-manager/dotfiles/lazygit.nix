@@ -5,9 +5,9 @@
   programs.delta.enable = true;
   programs.lazygit = {
     enable = true;
-    settings.git.pagers = [
+    settings.git.diffRenderers = [
       {
-        pager = "delta --dark --paging=never --line-numbers";
+        command = "delta --dark --paging=never --line-numbers";
       }
     ];
   };
