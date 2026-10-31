@@ -22,6 +22,7 @@
     ./dotfiles/git.nix
     ./dotfiles/helix/default.nix
     ./dotfiles/lazygit.nix
+    ./dotfiles/opencode.nix
     ./dotfiles/cli-packages.nix
     ./dotfiles/starship.nix
     ./dotfiles/yazi.nix
