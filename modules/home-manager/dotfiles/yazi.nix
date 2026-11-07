@@ -1,8 +1,8 @@
 {
   programs.yazi = {
     enable = true;
-    enableBashIntegration = true;
-    shellWrapperName = "yy";
+    enableBashIntegration = false;
+    enableZshIntegration = false;
 
     settings = {
       mgr = {
@@ -13,5 +13,6 @@
 
   home.shellAliases = {
     yz = "yazi";
+    yy = "yazi";
   };
 }
