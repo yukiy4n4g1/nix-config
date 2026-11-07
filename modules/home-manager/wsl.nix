@@ -9,10 +9,12 @@
     ./dotfiles/helix/default.nix
     ./dotfiles/lazygit.nix
     ./dotfiles/neovim/default.nix
+    ./dotfiles/opencode.nix
     ./dotfiles/cli-packages.nix
     ./dotfiles/starship.nix
     ./dotfiles/vim/default.nix
     ./dotfiles/wslu.nix
     ./dotfiles/yazi.nix
+    ./dotfiles/zellij.nix
   ];
 }
