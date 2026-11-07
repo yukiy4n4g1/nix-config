@@ -78,7 +78,7 @@
         system = "x86_64-linux";
         modules = [
           nixos-wsl.nixosModules.default {
-            system.stateVersion = "24.11";
+            system.stateVersion = "26.05";
             wsl.enable = true;
             wsl.defaultUser = "yukiy4n4g1";
           }
